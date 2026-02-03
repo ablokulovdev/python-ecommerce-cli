@@ -1,4 +1,5 @@
-from menu import get_auth_menu,get_print_menu
+from app.cli.menu import get_auth_menu, get_print_menu
+from app.cli.commands import AuthCommands
 
 
 get_print_menu()
@@ -9,10 +10,13 @@ def run():
         choise = input("Variantni tanlang: ")
         
         if choise == "1":
-            # login_comman
             pass
+            
         elif choise == "2":
-            # register_command()
+            a = AuthCommands
+            a.Login()
+            
+        elif choise == "3":
             pass
         
         elif choise == "0":
